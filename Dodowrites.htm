@@ -1,0 +1,134 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="author" content="Reman Dey"/>
+<meta name="description" content="Dodowrites"/>
+<title>
+Dodowrites
+</title>
+</head>
+<body bgcolor="white" id="body">
+<div style="background-color:#007ecc;color:white;border-radius:10px;" onclick="document.getElementById('div').style.display='block';"><h1 style="font-family:Arial Rounded MT,Arial;font-weight:900;">
+&nbsp;Dodowrites
+</h1>
+<h4 style="text-align:right;color:white;font-family:arial;">
+Write anything with Dodowrites&nbsp;
+</h4>
+
+
+</div>
+<div style="background-color:#f5fdff;border-color:#007ecc;" id="div">
+<nav>
+<main>
+<h5 style="font-family:arial;color:#007ecc;">
+FONT
+<select id="font" style="border-color:#007ecc;background-color:white;width:100px;border-width:2px;">
+<option value="Arial">Arial</option>
+<option value="Arial Rounded MT">Arial Rounded MT</option>
+<option value="times new roman">Times New Roman</option>
+<option value="Lucida Handwriting">Reman</option>
+<option value="sans-serif">Sans-Serif</option>
+<option value="Verdana">Verdana</option>
+<option value="jeh">Jeh</option>
+<option value="Lucida Console">Lucida Console</option>
+<option value="Old English Text MT">Old English Text MT</option>
+<option value="Rockwell">Rockwell</option>
+<option value="Showcard Gothic">Showcard Gothic</option>
+<option value="Kruti Astro">Kruti Astro</option>
+<option value="Matura MT Script Capitals">Matura MT Script Capitals</option>
+<option value="Stencil">Stencil</option>
+<option value="Bauhaus 93">Bauhaus 93</option>
+<option value="MS Reference Sans Serif">MS Reference Sans Serif</option>
+<option value="Papyrus">Papyrus</option>
+<option value="Niagara Engraved">Niagara Engraved</option>
+<option value="Palace Script MT">Palace Script MT</option>
+<option value="Monotype Corsiva">Monotype Corsiva</option>
+<option value="Vladimir Script">Vladimir Script</option>
+<option value="Ravie">Ravie</option>
+<option value="Tahoma">Tahoma</option>
+<option value="Bookman Old Style">Bookman Old Style</option>
+<option value="Webdings">Webdings</option>
+</select>
+
+<input type="number" id="size" value="20" name="input" style="width:50px;border-color:#007ecc;"/>
+BACKGROUND-COLOR
+<input type="color" id="backcolor" value="#ffffff" name="input" style="width:25px;border-color:#007ecc;border-width:2px;"/>
+FONT-COLOR
+<input type="color" id="fontcolor" value="black" name="input" style="width:25px;border-color:#007ecc;border-width:2px;"/>
+INSERT PHOTO
+<input type="file" onchange="readFile();" id="file" name="choose" style="width:88px;border-color:#007ecc;border-width:2px;"/>
+<button onclick="document.getElementById('div').style.display='none';" style="border-color:navy;color:white;background-color:#007ecc;border-radius:5px;border-color:white;">
+HIDE
+</button>
+</h5>
+<hr color="#007ecc">
+</main>
+</nav>
+
+</div>
+<p id="para" style="font-family:Arial;color:black;font-size:100%;" contenteditable >
+Write Here...
+<img src="" id="photo" width="0" height="0"/>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</p>
+
+<script type="text/javascript">
+document.getElementById("font").addEventListener("change",function(){
+
+document.getElementById("para").style.fontFamily= document.getElementById("font").value;
+document.getElementById("para").style.fontSize= document.getElementById("size").value;
+document.getElementById("para").style.fontColor= document.getElementById("fontcolor").value;
+document.getElementById("body").bgColor= document.getElementById("backcolor").value;
+});
+
+document.getElementById("size").addEventListener("change",function(){
+
+document.getElementById("para").style.fontFamily= document.getElementById("font").value;
+document.getElementById("para").style.fontSize= document.getElementById("size").value;
+document.getElementById("para").style.fontColor= document.getElementById("fontcolor").value;
+document.getElementById("body").bgColor= document.getElementById("backcolor").value;
+});
+document.getElementById("backcolor").addEventListener("change",function(){
+
+document.getElementById("para").style.fontFamily= document.getElementById("font").value;
+document.getElementById("para").style.fontSize= document.getElementById("size").value;
+document.getElementById("para").style.fontColor= document.getElementById("fontcolor").value;
+document.getElementById("body").bgColor= document.getElementById("backcolor").value;
+});
+
+document.getElementById("fontcolor").addEventListener("change",function(){
+
+document.getElementById("para").style.fontFamily= document.getElementById("font").value;
+document.getElementById("para").style.fontSize= document.getElementById("size").value;
+document.getElementById("para").style.color= document.getElementById("fontcolor").value;
+document.getElementById("body").bgColor= document.getElementById("backcolor").value;
+});
+function readFile() {
+var reader= new FileReader();
+var file=document.getElementById("file").files[0];
+
+reader.onload=function(e){
+document.getElementById("photo").src=e.target.result;
+
+}
+reader.readAsDataURL(file);
+}
+</script>
+<br>
+<br>
+<footer><font color="#007ecc" face="arial" size="3px">
+<center>This web app is developed by Reman Dey<br><button onclick="alert('E-mail :rita.airport@gmail.com');" style="background-color:white;border-color:white;border-radius:20px;border:none;font-size:15px;font-family:arial;color:#007ecc;">Contact us</button>
+&nbsp;
+<button onclick="alert('Dodowrites,Calculator,etc');" style="background-color:white;border-color:white;border-radius:20px;border:none;font-size:15px;font-family:arial;color:#007ecc;">More apps
+</button>
+<br><br>
+&copy;COPYRIGHT 2020 Reman Dey<br>All Rights reserved
+</center>
+</font>
+</footer>
+</body>
+</html>
+
